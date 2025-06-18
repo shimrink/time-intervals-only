@@ -7,7 +7,7 @@ import { SliderNavArrow } from '../icons';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import './Slider.css';
+import './Slider.scss';
 
 type TSliderProps = {
   data: {

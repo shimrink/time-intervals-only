@@ -6,10 +6,10 @@ import { Title } from './components/Title';
 
 import { useContainerWidth } from './hooks';
 
-import './App.css';
+import './App.scss';
 
 export const App = () => {
-  const { ref, isMobile } = useContainerWidth(1280);
+  const { ref, isMobile } = useContainerWidth();
 
   return (
     <main ref={ref} className='main'>

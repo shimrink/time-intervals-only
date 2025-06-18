@@ -6,16 +6,16 @@
   font-weight: 700;
   line-height: 160px;
   letter-spacing: -0.02em;
-}
 
-.interval-num_start {
-  color: var(--accent-color-1);
-  transform: translate(calc(-100% - 30px), -50%);
-}
+  &_start {
+    color: var(--accent-color-1);
+    transform: translate(calc(-100% - 30px), -50%);
+  }
 
-.interval-num_end {
-  color: var(--accent-color-2);
-  transform: translate(30px, -50%);
+  &_end {
+    color: var(--accent-color-2);
+    transform: translate(30px, -50%);
+  }
 }
 
 @container (max-width: 1280px) {
@@ -31,10 +31,10 @@
     position: static;
     font-size: 56px;
     line-height: 100%;
-  }
 
-  .interval-num_start,
-  .interval-num_end {
-    transform: translate(0, 0);
+    &_start,
+    &_end {
+      transform: translate(0, 0);
+    }
   }
 }

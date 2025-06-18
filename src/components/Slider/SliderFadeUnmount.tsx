@@ -4,7 +4,7 @@ import { state } from '../../store/state';
 import { useTimeIntervalsStore } from '../../store/useTimeIntervalsStore';
 import { Slider } from './Slider';
 
-import './Slider.css';
+import './Slider.scss';
 
 export const SliderFadeUnmount = ({ isMobile }: { isMobile: boolean }) => {
   const { title } = useTimeIntervalsStore();

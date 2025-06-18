@@ -17,23 +17,23 @@
 .swiper-slide {
   max-width: 400px;
   width: auto;
-}
 
-.swiper-slide__year {
-  margin-bottom: 15px;
-  color: var(--accent-color-1);
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 25px;
-  line-height: 120%;
-  text-transform: uppercase;
-}
+  &__year {
+    margin-bottom: 15px;
+    color: var(--accent-color-1);
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
 
-.swiper-slide__text {
-  font-size: 20px;
-  line-height: 30px;
-  text-wrap: balance;
+  &__text {
+    font-size: 20px;
+    line-height: 30px;
+    text-wrap: balance;
+  }
 }
 
 .swiper-button-disabled {
@@ -75,15 +75,15 @@
 
   .swiper-slide {
     max-width: 166px;
-  }
 
-  .swiper-slide__year {
-    font-size: 16px;
-  }
+    &__year {
+      font-size: 16px;
+    }
 
-  .swiper-slide__text {
-    font-size: 14px;
-    line-height: 145%;
+    &__text {
+      font-size: 14px;
+      line-height: 145%;
+    }
   }
 
   .swiper-button-custom {

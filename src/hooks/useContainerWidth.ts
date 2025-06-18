@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-export function useContainerWidth(breakpoint: number) {
+export function useContainerWidth(breakpoint = 1279) {
   const ref = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(true);
 

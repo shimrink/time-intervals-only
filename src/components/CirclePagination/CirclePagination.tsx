@@ -3,7 +3,7 @@ import { state } from '../../store/state';
 
 import { Arrow, ArrowMobile } from '../icons';
 
-import './CirclePagination.css';
+import './CirclePagination.scss';
 
 export const CirclePagination = ({ isMobile }: { isMobile: boolean }) => {
   const { title, changeInterval } = useTimeIntervalsStore();

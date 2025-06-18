@@ -6,7 +6,7 @@ import { useTimeIntervalsStore } from '../../store/useTimeIntervalsStore';
 
 import { TimeInterval } from '../TimeInterval';
 
-import './Circle.css';
+import './Circle.scss';
 
 export const Circle = ({ circleSize = 530, shift = 30 }) => {
   const { title, changeInterval } = useTimeIntervalsStore();

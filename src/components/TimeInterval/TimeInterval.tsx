@@ -2,7 +2,7 @@ import { useTimeIntervalsStore } from '../../store/useTimeIntervalsStore';
 
 import { useAnimatedNumber } from '../../hooks';
 
-import './TimeInterval.css';
+import './TimeInterval.scss';
 
 export const TimeInterval = () => {
   const { timeInterval } = useTimeIntervalsStore();
