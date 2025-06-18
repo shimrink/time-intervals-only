@@ -1,0 +1,1 @@
+export { TTimeInterval } from './types';

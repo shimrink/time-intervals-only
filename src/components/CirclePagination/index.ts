@@ -1,0 +1,1 @@
+export { CirclePagination } from './CirclePagination';

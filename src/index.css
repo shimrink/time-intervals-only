@@ -1,0 +1,50 @@
+:root {
+  --bg-color: #f4f5f9;
+  --primary-color: #42567a;
+  --primary-color-opacity-50: rgba(66, 86, 122, 0.5);
+  --primary-color-opacity-20: rgba(66, 86, 122, 0.2);
+  --primary-color-opacity-10: rgba(66, 86, 122, 0.1);
+  --secondary-color: rgba(48, 62, 88, 0.5);
+  --accent-color-1: #3877ee;
+  --accent-color-1-opacity-10: rgba(56, 119, 238, 0.1);
+  --accent-color-2: #ef5da8;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  container-type: inline-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}

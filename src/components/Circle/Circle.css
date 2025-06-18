@@ -1,0 +1,69 @@
+.circle-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color-opacity-20);
+}
+
+.circle-num-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.circle-num {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  transition-property: width, height, background-color, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+}
+.circle-num-container:hover .circle-num,
+.circle-num_active {
+  background-color: var(--bg-color);
+  width: 56px;
+  height: 56px;
+  border-color: var(--secondary-color);
+}
+
+.circle-num__num {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  line-height: 30px;
+  transform: translate(-50%, -50%);
+}
+
+.circle-num__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  opacity: 0;
+  transform: translate(47px, -50%);
+  transition: opacity 0.3s ease-in-out;
+}

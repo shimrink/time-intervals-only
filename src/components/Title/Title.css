@@ -1,0 +1,36 @@
+.title-container {
+  display: flex;
+  align-items: center;
+  margin-top: 170px;
+}
+
+.color-line {
+  width: 5px;
+  height: 120px;
+  background: linear-gradient(var(--accent-color-1), var(--accent-color-2));
+}
+
+.title {
+  width: 353px;
+  margin-left: 78px;
+  font-size: 56px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 120%;
+}
+
+@container (max-width: 1280px) {
+  .title-container {
+    margin-top: 59px;
+  }
+
+  .color-line {
+    display: none;
+  }
+
+  .title {
+    width: 123px;
+    margin-left: 0;
+    font-size: 20px;
+  }
+}
