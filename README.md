@@ -2,7 +2,7 @@
 
 ## 📖 Документация по технологиям
 
-**React 18**: [Документация](https://react.dev/)
+**React 19**: [Документация](https://react.dev/)
 
 **State management**: [Zustand](https://zustand.docs.pmnd.rs/getting-started/introduction)
 
