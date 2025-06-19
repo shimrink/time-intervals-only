@@ -11,13 +11,13 @@ export const CirclePagination = ({ isMobile }: { isMobile: boolean }) => {
 
   const backClick = () => {
     if (currentInterval > 0) {
-      changeInterval(state[currentInterval - 1]);
+      changeInterval({ title: state[currentInterval - 1].title });
     }
   };
 
   const nextClick = () => {
     if (currentInterval < state.length) {
-      changeInterval(state[currentInterval + 1]);
+      changeInterval({ title: state[currentInterval + 1].title });
     }
   };
 

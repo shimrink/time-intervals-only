@@ -8,7 +8,6 @@ type TTimeIntervalStore = TTimeInterval & {
 
 export const useTimeIntervalsStore = create<TTimeIntervalStore>((set) => ({
   title: 'Литература',
-  timeInterval: { start: 700, end: 1320 },
 
   changeInterval: (data) => {
     set(data);

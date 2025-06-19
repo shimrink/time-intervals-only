@@ -1,2 +1,2 @@
 export { Slider } from './Slider';
-export { SliderFadeUnmount } from './SliderFadeUnmount';
+export { SliderContainer } from './SliderContainer';

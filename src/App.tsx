@@ -1,6 +1,6 @@
-import { Circle } from './components/Circle';
+import { Spinner } from './components/Spinner';
 import { CirclePagination } from './components/CirclePagination';
-import { SliderFadeUnmount } from './components/Slider';
+import { SliderContainer } from './components/Slider';
 import { TimeInterval } from './components/TimeInterval';
 import { Title } from './components/Title';
 
@@ -18,9 +18,9 @@ export const App = () => {
       <div className='line vertical' />
       <div className='line horizontal' />
       <CirclePagination isMobile={isMobile} />
-      <SliderFadeUnmount isMobile={isMobile} />
+      <SliderContainer isMobile={isMobile} />
 
-      {!isMobile && <Circle />}
+      {!isMobile && <Spinner />}
     </main>
   );
 };

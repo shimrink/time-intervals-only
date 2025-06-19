@@ -1,21 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
-import clsx from 'clsx';
 
 import { state } from '../../store/state';
 import { useTimeIntervalsStore } from '../../store/useTimeIntervalsStore';
-
 import { TimeInterval } from '../TimeInterval';
+import { Circle } from './Circle';
 
-import './Circle.scss';
+import './Spinner.scss';
 
-export const Circle = ({ circleSize = 530, shift = 30 }) => {
-  const { title, changeInterval } = useTimeIntervalsStore();
+export const Spinner = ({ circleSize = 530, shift = 30 }) => {
+  const { title } = useTimeIntervalsStore();
   const sectorLength = 360 / state.length;
   const prevIntervalRef = useRef(
     state.findIndex((item) => item.title === title)
   );
   const [rotateIndex, setRotateIndex] = useState(prevIntervalRef.current);
-  const [prevTitle, setPrevTitle] = useState(title);
 
   useEffect(() => {
     const newInterval = state.findIndex((item) => item.title === title);
@@ -39,11 +37,6 @@ export const Circle = ({ circleSize = 530, shift = 30 }) => {
         setRotateIndex((prev) => prev + newInterval - prevInterval);
       }
     }
-
-    // hide circle title
-    setTimeout(() => {
-      setPrevTitle(title);
-    }, 300);
   }, [title]);
 
   return (
@@ -56,39 +49,13 @@ export const Circle = ({ circleSize = 530, shift = 30 }) => {
       <div className='circle-back' />
 
       {state.map((s, i) => (
-        <div
+        <Circle
           key={s.title}
-          className='circle-num-container'
-          style={{
-            transform: `translate(-50%, -50%) rotate(${
-              sectorLength * (i - rotateIndex) + shift
-            }deg) translateY(-${circleSize / 2}px) rotate(${-(
-              sectorLength * (i - rotateIndex) +
-              shift
-            )}deg)`,
-          }}
-        >
-          <div
-            className={clsx(
-              'circle-num',
-              title === s.title && 'circle-num_active'
-            )}
-            onClick={() => changeInterval(s)}
-          >
-            <span className='circle-num__num'>{i + 1}</span>
-          </div>
-
-          {(prevTitle === s.title || s.title === title) && (
-            <span
-              className='circle-num__text'
-              style={{
-                opacity: s.title === prevTitle && s.title === title ? 1 : 0,
-              }}
-            >
-              {s.title}
-            </span>
-          )}
-        </div>
+          title={s.title}
+          index={i}
+          rotateIndex={rotateIndex}
+          sectorLength={sectorLength}
+        />
       ))}
     </div>
   );
